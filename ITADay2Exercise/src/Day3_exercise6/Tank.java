@@ -21,12 +21,24 @@ public class Tank {
 	 
 	 if(!isClean) {
 		 System.out.println("Clean.. clean..");
+		 isClean = true;
+	 } else {
+		 isClean = false;
 	 }
-	 isClean = true;
+	// isClean = true;
  }
  
- public void finalized() {
-	 if(isClean & isEmpty) {
+ 
+// protected void finalize() throws Throwable {
+//     try {
+//        System.out.println("Finalized");        // close open files
+//     } finally {
+//         super.finalize();
+//     }
+// }
+ 
+ public void finalize() {
+	 if(isClean) {
 		 System.out.println("System terminate..");
 		 System.exit(0);
 	 }else {
@@ -44,10 +56,15 @@ public class Tank {
 	 System.out.println("Tank is now full. Please empty");
 	 tank.isEmpty();
 	 System.out.println("Is Tank clean? " + tank.isClean);
-	 tank.finalized();
-	 tank.isClean();
-	 System.out.println("Is Tank clean? " + tank.isClean);
-	 tank.finalized();
+	tank=null;
+	 System.gc();
+	tank = new Tank();
+	tank.isClean();
+ System.gc();
+	 //tank.finalized();
+	 //tank.isClean();
+	// System.out.println("Is Tank clean? " + tank.isClean);
+	// tank.finalized();
  }
  
 }

@@ -1,4 +1,4 @@
-package exercise3;
+package exercise3_Day2;
 
 public class HamsterClass extends Rodent{
 

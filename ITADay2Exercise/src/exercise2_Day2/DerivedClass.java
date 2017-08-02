@@ -1,4 +1,4 @@
-package exercise2;
+package exercise2_Day2;
 
 public class DerivedClass extends BaseClass {
 

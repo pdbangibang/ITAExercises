@@ -1,4 +1,4 @@
-package exercise3;
+package Day3_exercise3;
 
 public class GerbilClass extends Rodent {
 	

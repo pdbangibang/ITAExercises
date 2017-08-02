@@ -1,4 +1,4 @@
-package exercise;
+package exercise1_Day2;
 
 public class ClassC extends ClassA{
 

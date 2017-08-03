@@ -7,8 +7,13 @@ public class FiboClass {
 	public static void main(String[] args) {
 		
 		for (long i = 1; i < 100; i++) {
-			System.out.print(fibonacci(i) + " ");
+			
+			if(fibonacci(i)<100) {
+				System.out.print(fibonacci(i) + " ");
+			}
+			
 		}
+
 	}
 		
 	public static long fibonacci(long num) {
@@ -21,4 +26,7 @@ public class FiboClass {
  
 		return fibonacci(num - 1) + fibonacci(num - 2); 
 	}
+	
+	
+	
 }

@@ -18,8 +18,8 @@ public class CycleClassBal {
 		cycle[1] = new UniCycle();
 		cycle[2] = new Tricycle();
 		
-		Bicycle bike2 = (Bicycle)cycle[0];
-		UniCycle uni2 =  (UniCycle)cycle[1];
+		Bicycle bike2 = (Bicycle)cycle[0]; // ((Cycle)bike).ride();
+		UniCycle uni2 =  (UniCycle)cycle[1]; 
 		Tricycle trike2 = (Tricycle)cycle[2];
 		
 		

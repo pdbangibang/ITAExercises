@@ -8,13 +8,15 @@ public class CycleClass {
 		return "ride";
 	}
 	
+	public static void ride(CycleClass c) {}
+	
 	public static void main(String[] args) {
 		
 		
-		Bicycle bike = new Bicycle();
-		UniCycle uni = new UniCycle();
-		Tricycle trike = new Tricycle();
-		
+		Bicycle bike = new Bicycle();				ride(new CycleClass()); //other way of upcasting
+		UniCycle uni = new UniCycle();				ride(new UniCycle()); //upcast
+		Tricycle trike = new Tricycle();			ride(new Bicycle());
+													ride(new Tricycle());
 		CycleClass cycle1 = (CycleClass)bike;
 		CycleClass cycle2 = (CycleClass)uni;
 		CycleClass cycle3 = (CycleClass)trike;
